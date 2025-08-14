@@ -9,9 +9,9 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/lovable-uploads/dd3fffaf-bbec-4399-acf6-f3dafcb5cc30.png" 
+                src="/lovable-uploads/77f92f8e-9a9e-4978-8013-0c16d42ab4da.png" 
                 alt="Optimus - El Software para tu Mente"
-                className="h-12"
+                className="h-8 brightness-0 invert"
               />
             </div>
             <p className="text-white/80 leading-relaxed max-w-md">
