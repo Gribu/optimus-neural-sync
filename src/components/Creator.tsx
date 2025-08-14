@@ -19,7 +19,7 @@ const Creator = () => {
               
               <div className="space-y-4 text-foreground">
                 <p>
-                  Con más de una década transformando la vida de líderes y emprendedores, 
+                  Con más de tres década transformando la vida de líderes y emprendedores, 
                   Nelson ha desarrollado un sistema único que combina neurociencia aplicada 
                   con estrategias de alto impacto.
                 </p>
