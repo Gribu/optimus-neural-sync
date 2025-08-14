@@ -45,8 +45,8 @@ const Creator = () => {
               </div>
               <div className="text-center">
                 <TrendingUp className="w-8 h-8 text-warning mx-auto mb-2" />
-                <div className="text-xl font-bold text-primary">95%</div>
-                <div className="text-sm text-muted-foreground">Tasa de Éxito</div>
+                <div className="text-xl font-bold text-primary">100%</div>
+                <div className="text-sm text-muted-foreground">Éxito Empresarial</div>
               </div>
             </div>
 
