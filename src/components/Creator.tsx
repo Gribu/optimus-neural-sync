@@ -63,20 +63,14 @@ const Creator = () => {
             </div>
           </div>
 
-          {/* Image Placeholder - Professional photo of Nelson Abdul */}
+          {/* Professional photo of Nelson Abdul */}
           <div className="relative">
-            <div className="aspect-[4/5] bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-16 h-16 text-white" />
-                </div>
-                <p className="text-foreground font-medium">
-                  Foto profesional de Nelson Abdul
-                </p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Experto en Sincronización Neuronal
-                </p>
-              </div>
+            <div className="aspect-[4/5] rounded-2xl overflow-hidden">
+              <img 
+                src="/lovable-uploads/0fc88327-7fab-4319-994f-fcb733846825.png"
+                alt="Nelson Abdul - Experto en Sincronización Neuronal"
+                className="w-full h-full object-cover object-center"
+              />
             </div>
             
             {/* Decorative elements */}
