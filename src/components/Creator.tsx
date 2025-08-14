@@ -20,8 +20,7 @@ const Creator = () => {
               <div className="space-y-4 text-foreground">
                 <p>
                   Con más de tres década transformando la vida de líderes y emprendedores, 
-                  Nelson ha desarrollado un sistema único que combina neurociencia aplicada 
-                  con estrategias de alto impacto.
+                  Nelson ha desarrollado un sistema único que combina neurociencia aplicada, física, biología y otras disciplinas, para potenciar el desarrollo personal y profesional al más alto nivel.
                 </p>
                 
                 <p>
