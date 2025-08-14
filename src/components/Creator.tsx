@@ -69,7 +69,8 @@ const Creator = () => {
               <img 
                 src="/lovable-uploads/0fc88327-7fab-4319-994f-fcb733846825.png"
                 alt="Nelson Abdul - Experto en Sincronización Neuronal"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-left"
+                style={{ objectPosition: 'right center' }}
               />
             </div>
             
