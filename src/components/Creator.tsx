@@ -36,12 +36,12 @@ const Creator = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="text-center">
                 <Award className="w-8 h-8 text-accent mx-auto mb-2" />
-                <div className="text-xl font-bold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">Líderes Transformados</div>
+                <div className="text-xl font-bold text-primary">5000+</div>
+                <div className="text-sm text-muted-foreground">Empresarios Impactados</div>
               </div>
               <div className="text-center">
                 <Users className="w-8 h-8 text-secondary mx-auto mb-2" />
-                <div className="text-xl font-bold text-primary">10+</div>
+                <div className="text-xl font-bold text-primary">30+</div>
                 <div className="text-sm text-muted-foreground">Años de Experiencia</div>
               </div>
               <div className="text-center">
