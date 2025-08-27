@@ -24,12 +24,9 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left space-y-8">
             <div className="space-y-4">
-              <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
-                <img 
-                  src="/lovable-uploads/dd3fffaf-bbec-4399-acf6-f3dafcb5cc30.png" 
-                  alt="Optimus - El Software para tu Mente"
-                  className="h-16 md:h-20"
-                />
+              <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
+                <Brain className="w-8 h-8 text-secondary" />
+                <span className="text-lg font-medium text-secondary">PROGRAMA OPTIMUS</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">

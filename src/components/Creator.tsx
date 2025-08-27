@@ -19,8 +19,9 @@ const Creator = () => {
               
               <div className="space-y-4 text-foreground">
                 <p>
-                  Con más de tres década transformando la vida de líderes y emprendedores, 
-                  Nelson ha desarrollado un sistema único que combina neurociencia aplicada, física, biología y otras disciplinas, para potenciar el desarrollo personal y profesional al más alto nivel.
+                  Con más de una década transformando la vida de líderes y emprendedores, 
+                  Nelson ha desarrollado un sistema único que combina neurociencia aplicada 
+                  con estrategias de alto impacto.
                 </p>
                 
                 <p>
@@ -35,18 +36,18 @@ const Creator = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="text-center">
                 <Award className="w-8 h-8 text-accent mx-auto mb-2" />
-                <div className="text-xl font-bold text-primary">5000+</div>
-                <div className="text-sm text-muted-foreground">Empresarios Impactados</div>
+                <div className="text-xl font-bold text-primary">500+</div>
+                <div className="text-sm text-muted-foreground">Líderes Transformados</div>
               </div>
               <div className="text-center">
                 <Users className="w-8 h-8 text-secondary mx-auto mb-2" />
-                <div className="text-xl font-bold text-primary">30+</div>
+                <div className="text-xl font-bold text-primary">10+</div>
                 <div className="text-sm text-muted-foreground">Años de Experiencia</div>
               </div>
               <div className="text-center">
                 <TrendingUp className="w-8 h-8 text-warning mx-auto mb-2" />
-                <div className="text-xl font-bold text-primary">100%</div>
-                <div className="text-sm text-muted-foreground">Éxito Empresarial</div>
+                <div className="text-xl font-bold text-primary">95%</div>
+                <div className="text-sm text-muted-foreground">Tasa de Éxito</div>
               </div>
             </div>
 
@@ -63,15 +64,20 @@ const Creator = () => {
             </div>
           </div>
 
-          {/* Professional photo of Nelson Abdul */}
+          {/* Image Placeholder - Professional photo of Nelson Abdul */}
           <div className="relative">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden">
-              <img 
-                src="/lovable-uploads/0fc88327-7fab-4319-994f-fcb733846825.png"
-                alt="Nelson Abdul - Experto en Sincronización Neuronal"
-                className="w-full h-full object-cover object-left"
-                style={{ objectPosition: 'right center' }}
-              />
+            <div className="aspect-[4/5] bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
+              <div className="text-center p-8">
+                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent mx-auto mb-4 flex items-center justify-center">
+                  <Users className="w-16 h-16 text-white" />
+                </div>
+                <p className="text-foreground font-medium">
+                  Foto profesional de Nelson Abdul
+                </p>
+                <p className="text-sm text-muted-foreground mt-2">
+                  Experto en Sincronización Neuronal
+                </p>
+              </div>
             </div>
             
             {/* Decorative elements */}

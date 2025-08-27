@@ -8,11 +8,13 @@ const Footer = () => {
           {/* Logo and Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <img 
-                src="/lovable-uploads/77f92f8e-9a9e-4978-8013-0c16d42ab4da.png" 
-                alt="Optimus - El Software para tu Mente"
-                className="h-8 brightness-0 invert"
-              />
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
+                <Brain className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">OPTIMUS</h3>
+                <p className="text-sm text-white/70">Sincronización Neuronal</p>
+              </div>
             </div>
             <p className="text-white/80 leading-relaxed max-w-md">
               Programa de alto impacto para reprogramar la mente, eliminar bloqueos 
