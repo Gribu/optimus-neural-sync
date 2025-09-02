@@ -1,8 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Brain, Target } from "lucide-react";
 import neuralBrainHero from "@/assets/neural-brain-hero.jpg";
+import { useContent } from "@/contexts/ContentContext";
 
 const Hero = () => {
+  const { content } = useContent();
+
+  // Contenido por defecto como fallback
+  const defaultContent = {
+    title: "Descubre el Sistema para Reprogramar tu Mente y Acelerar tus Metas",
+    subtitle: "PROGRAMA OPTIMUS",
+    description: "La Sincronización Neuronal: Programa de alto impacto para reprogramar la mente, eliminar bloqueos y alcanzar metas más rápido.",
+    cta_primary: "Aplicar al Programa",
+    cta_secondary: "Ver Testimonios",
+    stats: {
+      days: "7-14",
+      days_label: "Días inicio",
+      guarantee: "100%",
+      guarantee_label: "Garantía",
+      coaching: "1:1",
+      coaching_label: "Coaching"
+    }
+  };
+
+  const heroContent = content?.hero || defaultContent;
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted overflow-hidden">
       {/* Background Image */}
@@ -26,19 +48,25 @@ const Hero = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
                 <Brain className="w-8 h-8 text-secondary" />
-                <span className="text-lg font-medium text-secondary">PROGRAMA OPTIMUS</span>
+                <span className="text-lg font-medium text-secondary">{heroContent.subtitle}</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Descubre el Sistema para{" "}
-                <span className="text-transparent bg-gradient-to-r from-secondary to-accent bg-clip-text">
-                  Reprogramar tu Mente
-                </span>{" "}
-                y Acelerar tus Metas
+                {heroContent.title.split(' ').map((word, index) => {
+                  const highlightWords = ['Reprogramar', 'Mente', 'Acelerar', 'Metas'];
+                  if (highlightWords.includes(word)) {
+                    return (
+                      <span key={index} className="text-transparent bg-gradient-to-r from-secondary to-accent bg-clip-text">
+                        {word}{' '}
+                      </span>
+                    );
+                  }
+                  return word + ' ';
+                })}
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-                <strong>La Sincronización Neuronal:</strong> Programa de alto impacto para reprogramar la mente, eliminar bloqueos y alcanzar metas más rápido.
+                <strong>La Sincronización Neuronal:</strong> {heroContent.description}
               </p>
             </div>
 
@@ -49,7 +77,7 @@ const Hero = () => {
                 className="group"
                 onClick={() => window.open('https://nelsonabdul.com/', '_blank')}
               >
-                Aplicar al Programa
+                {heroContent.cta_primary}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
@@ -58,7 +86,7 @@ const Hero = () => {
                 size="lg"
                 onClick={() => window.open('https://nelsonabdul.com/testimoniales', '_blank')}
               >
-                Ver Testimonios
+                {heroContent.cta_secondary}
               </Button>
             </div>
 
@@ -66,16 +94,16 @@ const Hero = () => {
             <div className="flex justify-center lg:justify-start">
               <div className="grid grid-cols-3 gap-8 text-center lg:text-left">
                 <div>
-                  <div className="text-2xl font-bold text-primary">7-14</div>
-                  <div className="text-sm text-muted-foreground">Días inicio</div>
+                  <div className="text-2xl font-bold text-primary">{heroContent.stats.days}</div>
+                  <div className="text-sm text-muted-foreground">{heroContent.stats.days_label}</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-secondary">100%</div>
-                  <div className="text-sm text-muted-foreground">Garantía</div>
+                  <div className="text-2xl font-bold text-secondary">{heroContent.stats.guarantee}</div>
+                  <div className="text-sm text-muted-foreground">{heroContent.stats.guarantee_label}</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-accent">1:1</div>
-                  <div className="text-sm text-muted-foreground">Coaching</div>
+                  <div className="text-2xl font-bold text-accent">{heroContent.stats.coaching}</div>
+                  <div className="text-sm text-muted-foreground">{heroContent.stats.coaching_label}</div>
                 </div>
               </div>
             </div>

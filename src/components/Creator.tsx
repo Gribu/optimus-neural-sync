@@ -1,7 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { Award, Users, TrendingUp, ArrowRight } from "lucide-react";
+import { useContent } from "@/contexts/ContentContext";
 
 const Creator = () => {
+  const { content } = useContent();
+
+  const defaultContent = {
+    title: "Conoce a Nelson Abdul",
+    description: "Experto en mentalidad de alto rendimiento y creador del revolucionario método de Sincronización Neuronal Optimus.",
+    bio: [
+      "Con más de una década transformando la vida de líderes y emprendedores, Nelson ha desarrollado un sistema único que combina neurociencia aplicada con estrategias de alto impacto.",
+      "Su enfoque directo y basado en resultados ha ayudado a cientos de personas a reprogramar sus mentes, eliminar bloqueos limitantes y acelerar el logro de sus metas más ambiciosas."
+    ],
+    stats: {
+      clients: "500+",
+      clients_label: "Líderes Transformados",
+      experience: "10+",
+      experience_label: "Años de Experiencia",
+      success_rate: "95%",
+      success_rate_label: "Tasa de Éxito"
+    },
+    cta: "Trabajar con Nelson"
+  };
+
+  const creatorContent = content?.creator || defaultContent;
+
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
@@ -10,44 +33,43 @@ const Creator = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Conoce a <span className="text-primary">Nelson Abdul</span>
+                {creatorContent.title.split(' ').map((word, index) => {
+                  if (word.includes('Nelson') || word.includes('Abdul')) {
+                    return (
+                      <span key={index} className="text-primary">{word} </span>
+                    );
+                  }
+                  return word + ' ';
+                })}
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Experto en mentalidad de alto rendimiento y creador del revolucionario método de 
-                <strong className="text-foreground"> Sincronización Neuronal Optimus</strong>.
+                {creatorContent.description}
               </p>
               
               <div className="space-y-4 text-foreground">
-                <p>
-                  Con más de una década transformando la vida de líderes y emprendedores, 
-                  Nelson ha desarrollado un sistema único que combina neurociencia aplicada 
-                  con estrategias de alto impacto.
-                </p>
-                
-                <p>
-                  Su enfoque directo y basado en resultados ha ayudado a cientos de personas 
-                  a reprogramar sus mentes, eliminar bloqueos limitantes y acelerar el logro 
-                  de sus metas más ambiciosas.
-                </p>
+                {creatorContent.bio.map((paragraph, index) => (
+                  <p key={index}>
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </div>
 
-            {/* Credentials */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="text-center">
                 <Award className="w-8 h-8 text-accent mx-auto mb-2" />
-                <div className="text-xl font-bold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">Líderes Transformados</div>
+                <div className="text-xl font-bold text-primary">{creatorContent.stats.clients}</div>
+                <div className="text-sm text-muted-foreground">{creatorContent.stats.clients_label}</div>
               </div>
               <div className="text-center">
                 <Users className="w-8 h-8 text-secondary mx-auto mb-2" />
-                <div className="text-xl font-bold text-primary">10+</div>
-                <div className="text-sm text-muted-foreground">Años de Experiencia</div>
+                <div className="text-xl font-bold text-primary">{creatorContent.stats.experience}</div>
+                <div className="text-sm text-muted-foreground">{creatorContent.stats.experience_label}</div>
               </div>
               <div className="text-center">
                 <TrendingUp className="w-8 h-8 text-warning mx-auto mb-2" />
-                <div className="text-xl font-bold text-primary">95%</div>
-                <div className="text-sm text-muted-foreground">Tasa de Éxito</div>
+                <div className="text-xl font-bold text-primary">{creatorContent.stats.success_rate}</div>
+                <div className="text-sm text-muted-foreground">{creatorContent.stats.success_rate_label}</div>
               </div>
             </div>
 
@@ -58,7 +80,7 @@ const Creator = () => {
                 className="group"
                 onClick={() => window.open('https://nelsonabdul.com/', '_blank')}
               >
-                Trabajar con Nelson
+                {creatorContent.cta}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>

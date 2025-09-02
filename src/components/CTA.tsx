@@ -1,17 +1,39 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, CheckCircle } from "lucide-react";
+import { useContent } from "@/contexts/ContentContext";
 
 const CTA = () => {
+  const { content } = useContent();
+
+  const defaultContent = {
+    title: "¿Listo para Transformar tu Mente y Acelerar tus Resultados?",
+    description: "Únete a la élite de líderes que han reprogramado su mente para el éxito extraordinario.",
+    urgency: "⚡ Plazas limitadas para garantizar atención personalizada",
+    urgency_description: "El programa acepta únicamente candidatos comprometidos con la excelencia.",
+    primary_button: "Aplicar al Programa Ahora",
+    secondary_button: "Ver Testimonios"
+  };
+
+  const ctaContent = content?.cta || defaultContent;
+
   return (
     <section className="py-24 bg-gradient-to-br from-primary to-accent text-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-              ¿Listo para <span className="text-warning">Transformar tu Mente</span> y Acelerar tus Resultados?
+              {ctaContent.title.split(' ').map((word, index) => {
+                const highlightWords = ['Transformar', 'Mente'];
+                if (highlightWords.includes(word)) {
+                  return (
+                    <span key={index} className="text-warning">{word} </span>
+                  );
+                }
+                return word + ' ';
+              })}
             </h2>
             <p className="text-xl text-white/90 leading-relaxed">
-              Únete a la élite de líderes que han reprogramado su mente para el éxito extraordinario.
+              {ctaContent.description}
             </p>
           </div>
 
@@ -39,7 +61,7 @@ const CTA = () => {
               className="group text-lg px-8 py-4"
               onClick={() => window.open('https://nelsonabdul.com/', '_blank')}
             >
-              Aplicar al Programa Ahora
+              {ctaContent.primary_button}
               <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
             </Button>
             
@@ -49,17 +71,16 @@ const CTA = () => {
               className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white"
               onClick={() => window.open('https://nelsonabdul.com/testimoniales', '_blank')}
             >
-              Ver Testimonios
+              {ctaContent.secondary_button}
             </Button>
           </div>
 
-          {/* Urgency/Scarcity */}
           <div className="mt-8 p-6 bg-warning/20 rounded-xl border border-warning/30">
             <p className="text-warning font-semibold text-lg">
-              ⚡ Plazas limitadas para garantizar atención personalizada
+              {ctaContent.urgency}
             </p>
             <p className="text-white/80 mt-2">
-              El programa acepta únicamente candidatos comprometidos con la excelencia.
+              {ctaContent.urgency_description}
             </p>
           </div>
         </div>
