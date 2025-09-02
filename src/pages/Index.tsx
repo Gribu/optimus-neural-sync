@@ -9,10 +9,18 @@ import WelcomeScreen from "@/components/WelcomeScreen";
 
 const Index = () => {
   const [hasCompletedWelcome, setHasCompletedWelcome] = useState(false);
+  const [userProfile, setUserProfile] = useState<string>("");
 
   const handleWelcomeComplete = (selection: string) => {
-    console.log("Usuario seleccionó:", selection);
+    // Guardar la selección del usuario en el estado
+    setUserProfile(selection);
     setHasCompletedWelcome(true);
+    
+    // También guardar en localStorage para persistencia
+    localStorage.setItem('optimusUserProfile', selection);
+    localStorage.setItem('optimusWelcomeCompleted', 'true');
+    
+    console.log("Usuario se identificó como:", selection);
   };
 
   if (!hasCompletedWelcome) {
@@ -20,7 +28,7 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen animate-fade-in">
       <Hero />
       <Program />
       <Benefits />
