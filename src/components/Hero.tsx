@@ -67,7 +67,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-                <strong>La Sincronización Neuronal:</strong> {heroContent.description}
+                {heroContent.description}
               </p>
             </div>
 
