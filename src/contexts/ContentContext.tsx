@@ -7,6 +7,7 @@ export interface DynamicContent {
     description: string;
     cta_primary: string;
     cta_secondary: string;
+    badge: string;
     stats: {
       days: string;
       days_label: string;
@@ -19,6 +20,7 @@ export interface DynamicContent {
   program: {
     title: string;
     description: string;
+    confirmation: string;
     features: Array<{
       title: string;
       description: string;
@@ -57,6 +59,9 @@ export interface DynamicContent {
     urgency_description: string;
     primary_button: string;
     secondary_button: string;
+    benefit1_label: string;
+    benefit2_label: string;
+    benefit3_label: string;
   };
 }
 

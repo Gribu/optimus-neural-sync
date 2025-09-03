@@ -51,6 +51,7 @@ const Program = () => {
   const defaultContent = {
     title: "¿Qué es el Programa Optimus?",
     description: "Un sistema integral de sincronización neuronal diseñado para líderes y emprendedores que buscan resultados excepcionales en tiempo récord.",
+    confirmation: "Sistema probado con resultados medibles y garantizados",
     features: defaultFeatures
   };
 
@@ -108,7 +109,7 @@ const Program = () => {
           <div className="inline-flex items-center gap-2 bg-secondary/10 px-6 py-3 rounded-full">
             <CheckCircle className="w-5 h-5 text-secondary" />
             <span className="font-medium text-secondary">
-              Sistema probado con resultados medibles y garantizados
+              {programContent.confirmation}
             </span>
           </div>
         </div>

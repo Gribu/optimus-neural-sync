@@ -11,7 +11,10 @@ const CTA = () => {
     urgency: "⚡ Plazas limitadas para garantizar atención personalizada",
     urgency_description: "El programa acepta únicamente candidatos comprometidos con la excelencia.",
     primary_button: "Aplicar al Programa Ahora",
-    secondary_button: "Ver Testimonios"
+    secondary_button: "Ver Testimonios",
+    benefit1_label: "Inicio en 7-14 días",
+    benefit2_label: "Resultados garantizados",
+    benefit3_label: "Coaching 1-a-1"
   };
 
   const ctaContent = content?.cta || defaultContent;
@@ -41,15 +44,15 @@ const CTA = () => {
           <div className="grid md:grid-cols-3 gap-6 my-12">
             <div className="flex items-center justify-center gap-3 bg-white/10 rounded-lg py-4 px-6 backdrop-blur-sm">
               <Clock className="w-6 h-6 text-warning" />
-              <span className="font-medium">Inicio en 7-14 días</span>
+              <span className="font-medium">{ctaContent.benefit1_label}</span>
             </div>
             <div className="flex items-center justify-center gap-3 bg-white/10 rounded-lg py-4 px-6 backdrop-blur-sm">
               <CheckCircle className="w-6 h-6 text-warning" />
-              <span className="font-medium">Resultados garantizados</span>
+              <span className="font-medium">{ctaContent.benefit2_label}</span>
             </div>
             <div className="flex items-center justify-center gap-3 bg-white/10 rounded-lg py-4 px-6 backdrop-blur-sm">
               <ArrowRight className="w-6 h-6 text-warning" />
-              <span className="font-medium">Coaching 1-a-1</span>
+              <span className="font-medium">{ctaContent.benefit3_label}</span>
             </div>
           </div>
 

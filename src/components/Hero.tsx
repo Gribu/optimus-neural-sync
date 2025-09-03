@@ -13,6 +13,7 @@ const Hero = () => {
     description: "La Sincronización Neuronal: Programa de alto impacto para reprogramar la mente, eliminar bloqueos y alcanzar metas más rápido.",
     cta_primary: "Aplicar al Programa",
     cta_secondary: "Ver Testimonios",
+    badge: "Resultados Garantizados",
     stats: {
       days: "7-14",
       days_label: "Días inicio",
@@ -123,7 +124,7 @@ const Hero = () => {
             {/* Floating Elements */}
             <div className="absolute -top-4 -right-4 bg-warning text-warning-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
               <Target className="w-4 h-4 inline mr-1" />
-              Resultados Garantizados
+              {heroContent.badge}
             </div>
           </div>
         </div>
