@@ -84,11 +84,14 @@ const WelcomeScreen = ({ onComplete }: WelcomeScreenProps) => {
               className={`relative group transition-all duration-200 animate-fade-in`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className={`flex items-start space-x-4 p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer hover:shadow-lg ${
-                selectedOption === option.value 
-                  ? 'border-accent bg-accent/5 shadow-md' 
-                  : 'border-border hover:border-accent/50 hover:bg-accent/2'
-              }`}>
+              <div 
+                className={`flex items-start space-x-4 p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer hover:shadow-lg ${
+                  selectedOption === option.value 
+                    ? 'border-accent bg-accent/5 shadow-md' 
+                    : 'border-border hover:border-accent/50 hover:bg-accent/2'
+                }`}
+                onClick={() => setSelectedOption(option.value)}
+              >
                 <RadioGroupItem 
                   value={option.value} 
                   id={option.value}

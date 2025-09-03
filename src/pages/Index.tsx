@@ -40,18 +40,18 @@ const Index = () => {
     
     return {
       hero: {
-        title: "Sincronización Neuronal",
-        subtitle: "Programa Optimus",
+        title: "Descubre el Sistema para Reprogramar tu Mente y Acelerar tus Metas",
+        subtitle: "PROGRAMA OPTIMUS", 
         description: content.hero_descripcion || "La Sincronización Neuronal: Programa de alto impacto para reprogramar la mente, eliminar bloqueos y alcanzar metas más rápido.",
         cta_primary: content.hero_boton_aplicar_etiqueta || "Aplicar al Programa",
         cta_secondary: content.hero_boton_testimonios_etiqueta || "Ver Testimonios",
         badge: content.hero_insignia_resultados_etiqueta || "Resultados Garantizados",
         stats: {
-          days: content.hero_estadistica_1_valor || "14-Jul",
+          days: content.hero_estadistica_1_valor || "7-14",
           days_label: content.hero_estadistica_1_etiqueta || "Días inicio",
-          guarantee: content.hero_estadistica_2_valor || "1",
+          guarantee: content.hero_estadistica_2_valor || "100%",
           guarantee_label: content.hero_estadistica_2_etiqueta || "Garantía",
-          coaching: content.hero_estadistica_3_valor || "1:01",
+          coaching: content.hero_estadistica_3_valor || "1:1",
           coaching_label: content.hero_estadistica_3_etiqueta || "Coaching",
         }
       },
@@ -66,6 +66,10 @@ const Index = () => {
           { title: content.programa_caracteristica_4_titulo || "Optimización de la matriz mental", description: content.programa_caracteristica_4_descripcion || "Reconfiguración de patrones limitantes" },
           { title: content.programa_caracteristica_5_titulo || "Acompañamiento 1-a-1 con coach experto", description: content.programa_caracteristica_5_descripcion || "Sesiones personalizadas de alto valor" },
           { title: content.programa_caracteristica_6_titulo || "Sesiones grupales con Nelson Abdul", description: content.programa_caracteristica_6_descripcion || "Aprendizaje directo del creador del método" },
+          { title: content.programa_caracteristica_7_titulo || "Acceso a la plataforma Optimus", description: content.programa_caracteristica_7_descripcion || "Herramientas digitales exclusivas" },
+          { title: content.programa_caracteristica_8_titulo || "Red de apoyo entre líderes y emprendedores", description: content.programa_caracteristica_8_descripcion || "Comunidad de alto rendimiento" },
+          { title: content.programa_caracteristica_9_titulo || "Garantía de resultados (100% devolución en 30 días)", description: content.programa_caracteristica_9_descripcion || "Compromiso total con tu transformación" },
+          { title: content.programa_caracteristica_10_titulo || "Certificación en Liderazgo Optimus", description: content.programa_caracteristica_10_descripcion || "Acreditación oficial del programa" }
         ]
       },
       benefits: {
